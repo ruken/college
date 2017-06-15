@@ -22,7 +22,7 @@ public class Student implements Serializable {
 	@Column(name="last_name")
 	private String lastName;
 
-	private String wallet;
+	private Integer wallet;
 	
 
 	public Student() {
@@ -52,11 +52,11 @@ public class Student implements Serializable {
 		this.lastName = lastName;
 	}
 
-	public String getWallet() {
+	public Integer getWallet() {
 		return this.wallet;
 	}
 
-	public void setWallet(String wallet) {
+	public void setWallet(Integer wallet) {
 		this.wallet = wallet;
 	}
 
