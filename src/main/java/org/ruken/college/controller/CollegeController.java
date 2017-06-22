@@ -1,6 +1,7 @@
 package org.ruken.college.controller;
 
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +36,10 @@ public class CollegeController {
 	/*------------------------------------------------------------------------------------------------------------------------------+
 	|   ResponseEntity<> -  | Java Generic stating ResponseEntity will contain a Student object
 	+-------------------------------------------------------------------------------------------------------------------------------*/
-	ResponseEntity<Student> addStudent(@RequestBody StudentPayload input) { 
+	ResponseEntity addStudent(@RequestBody StudentPayload input) { 
+		
+		ResponseEntity response = new ResponseEntity(HttpStatus.OK);
+		
       System.out.println("adding Student: " + input);
       
       /*------------------------------------------------------------------------------------------------------------------------------+
@@ -52,7 +56,7 @@ public class CollegeController {
       
       studentRepo.save(person);
       
-      return null;
+      return response;
 	}
 	
 	
