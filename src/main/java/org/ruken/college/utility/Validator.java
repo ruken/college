@@ -1,4 +1,4 @@
-package main.java.org.ruken.college.utility;
+package org.ruken.college.utility;
 import org.ruken.json.StudentPayload;
 
 public class Validator {
@@ -9,15 +9,15 @@ public class Validator {
 
 		
 	if (payload.getFirstName()  == null){
-		return error;
+		return error + " First Name Missing";
 		}
 	
 	if (payload.getLastName()  == null){
-		return error;
+		return error + " Last Name Missing";
 		}
 	
 	if (payload.getWallet()  == null){
-		return error;
+		return error + " Wallet Missing";
 		}
 	
 	return null; 

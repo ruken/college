@@ -1,2 +1,1 @@
-# college
-my first ever project! yay!
+# Sample Course Registration System
