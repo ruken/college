@@ -1,12 +1,12 @@
 package org.ruken.college.jpa.model;
 
-import java.io.Serializable;
-import javax.persistence.*;
+		import java.io.Serializable;
+		import javax.persistence.*;
 
 
 /**
  * The persistent class for the student database table.
- * 
+ *
  */
 @Entity
 @NamedQuery(name="Student.findAll", query="SELECT s FROM Student s")
@@ -22,8 +22,7 @@ public class Student implements Serializable {
 	@Column(name="last_name")
 	private String lastName;
 
-	private Integer wallet;
-	
+	private int wallet;
 
 	public Student() {
 	}
@@ -52,11 +51,11 @@ public class Student implements Serializable {
 		this.lastName = lastName;
 	}
 
-	public Integer getWallet() {
+	public int getWallet() {
 		return this.wallet;
 	}
 
-	public void setWallet(Integer wallet) {
+	public void setWallet(int wallet) {
 		this.wallet = wallet;
 	}
 

@@ -1,12 +1,15 @@
 package org.ruken.college.jpa.model;
 
-import java.io.Serializable;
-import javax.persistence.*;
+
+
+
+		import java.io.Serializable;
+		import javax.persistence.*;
 
 
 /**
  * The persistent class for the classes database table.
- * 
+ *
  */
 @Entity
 @Table(name="classes")
@@ -17,17 +20,15 @@ public class Class implements Serializable {
 	@Id
 	private int id;
 
+	@Column(name="max_students")
+	private int maxStudents;
+
 	private String name;
 
-	private String price;
+	private int price;
 
-	@Column(name="student_id")
-	private int studentId;
-
-	//bi-directional one-to-one association to Student
-	@OneToOne
-	@JoinColumn(name="id")
-	private Student student;
+	@Column(name="student_count")
+	private int studentCount;
 
 	public Class() {
 	}
@@ -40,6 +41,14 @@ public class Class implements Serializable {
 		this.id = id;
 	}
 
+	public int getMaxStudents() {
+		return this.maxStudents;
+	}
+
+	public void setMaxStudents(int maxStudents) {
+		this.maxStudents = maxStudents;
+	}
+
 	public String getName() {
 		return this.name;
 	}
@@ -48,28 +57,20 @@ public class Class implements Serializable {
 		this.name = name;
 	}
 
-	public String getPrice() {
+	public int getPrice() {
 		return this.price;
 	}
 
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 
-	public int getStudentId() {
-		return this.studentId;
+	public int getStudentCount() {
+		return this.studentCount;
 	}
 
-	public void setStudentId(int studentId) {
-		this.studentId = studentId;
-	}
-
-	public Student getStudent() {
-		return this.student;
-	}
-
-	public void setStudent(Student student) {
-		this.student = student;
+	public void setStudentCount(int studentCount) {
+		this.studentCount = studentCount;
 	}
 
 }
