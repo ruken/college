@@ -86,6 +86,13 @@ CREATE TABLE `student` (
 -- Dumping data for table `student`
 --
 
+CREATE TABLE `user_profile` (
+  `email` VARCHAR(64) NOT NULL,
+  `first_name` VARCHAR(45) NULL,
+  `last_name` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
+  PRIMARY KEY (`email`));
+
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
 INSERT INTO `student` VALUES (1,'Ruken','Oral',100),(2,'Bilbo','Baggins',4500);
@@ -106,3 +113,4 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2017-07-18 14:08:20
+
