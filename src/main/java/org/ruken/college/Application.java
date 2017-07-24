@@ -1,8 +1,5 @@
 package org.ruken.college;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,6 +21,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import static springfox.documentation.builders.PathSelectors.regex;
 
+import org.apache.log4j.Logger;
+
 /** * Created by azizunsal on 24/02/15. */
 @Configuration
 @EnableAutoConfiguration
@@ -35,7 +34,7 @@ import static springfox.documentation.builders.PathSelectors.regex;
 @SpringBootApplication
 public class Application {
 
-	private static final Logger log = LoggerFactory.getLogger(Application.class);
+	private static final Logger log = Logger.getLogger(Application.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class);
