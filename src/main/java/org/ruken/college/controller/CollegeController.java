@@ -70,10 +70,6 @@ public class CollegeController {
     return response;
   } /* END OF method register */
   
-  @RequestMapping("/")
-  public String index() {
-    return "Greetings from Spring Boot!";
-  } /* END OF method index */
 
 } /* END OF class CollegeController */
 

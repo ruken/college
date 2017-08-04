@@ -25,7 +25,7 @@ public class WebsiteRegistrationController {
   WebsiteRegistrationService websiteRegistrationService;
   /*------- Start of Code -------*/
   
-  @RequestMapping(value="/register", method = RequestMethod.POST)
+  @RequestMapping(value="/registerStudent", method = RequestMethod.POST)
   ResponseEntity register(@RequestBody UserProfilePayload input) {
     /*------- Local variables -------*/
     ResponseEntity response = new ResponseEntity(HttpStatus.OK);
