@@ -10,6 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="user_profile")
+
 @NamedQuery(name="UserProfile.findAll", query="SELECT u FROM UserProfile u")
 public class UserProfile implements Serializable {
 	private static final long serialVersionUID = 1L;

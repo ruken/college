@@ -51,6 +51,9 @@ public class CollegeController {
     return response;
   } /* END OF method addStudent */
 
+
+
+
   @RequestMapping(value="/register", method = RequestMethod.POST)
   ResponseEntity register(@RequestBody ReservedClass input) {
     /*------- Local variables -------*/

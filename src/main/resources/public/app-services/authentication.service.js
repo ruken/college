@@ -19,9 +19,12 @@
 
             /* Dummy authentication for testing, uses $timeout to simulate api call
              ----------------------------------------------*/
-            /*$timeout(function () {
+
+            $timeout(function () {
+
                 var response;
                 UserService.GetByUsername(username)
+
                     .then(function (user) {
                         if (user !== null && user.password === password) {
                             response = { success: true };
@@ -30,16 +33,30 @@
                         }
                         callback(response);
                     });
+
             }, 1000);
-            */
+
 
             /* Use this for real authentication
              ----------------------------------------------*/
-            $http.post('/authenticateUser', { username: username, password: password })
-                .success(function (response) {
-                    response = { success: true }
-                    callback(response);
-                });
+              /*
+            $http.post('/authenticateUser', { username: username, password: password }, null)
+
+            .then(function(response) {
+            console.log("hello");
+             console.log("balloon");
+                            return response.data;
+                        }, function(response) {
+
+
+                         callback(response);
+                            return response.data;
+                        });    */
+
+               //.success(function (response) {
+                  //  response = { success: true }
+                   // callback(response);
+               // });
 
         }
 

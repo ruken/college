@@ -25,7 +25,7 @@ public class WebsiteRegistrationController {
   WebsiteRegistrationService websiteRegistrationService;
   /*------- Start of Code -------*/
   
-  @RequestMapping(value="/registerStudent", method = RequestMethod.POST)
+  @RequestMapping(value="/register", method = RequestMethod.POST)
   ResponseEntity register(@RequestBody UserProfilePayload input) {
     /*------- Local variables -------*/
     ResponseEntity response = new ResponseEntity(HttpStatus.OK);
@@ -34,14 +34,6 @@ public class WebsiteRegistrationController {
     System.out.println("registering Student: " + input);
     websiteRegistrationService.registerUser(input);
 
-    //constructor creating a ReservedClass object.
-    //ReservedClass registered = new ReservedClass();
-
-    //setting "", "", and "wallet" person properties from the studentPayLoad.json input
-    //registered.setClassId(input.getClassId());
-    //registered.setStudentId(input.getStudentId());
-
-    //reservedClassJpaRepo.save(registered);
 
     return response;
   } /* END OF method register */

@@ -30,13 +30,20 @@ public class WebsiteRegistrationService {
   
   public boolean registerUser(UserProfilePayload input) {
     /*------- Local variables -------*/
-    boolean Trc        = false;
+    boolean Trc        = true;
+UserProfile user = new UserProfile();
   
     /*-------- Start of Code --------*/
     MB: {
 
-      
+      user.setFirstName(input.getFirstName());
+      user.setLastName(input.getLastName());
+      user.setEmail(input.getEmail());
+      user.setPassword(input.getPassword());
 
+
+
+      websiteRegistrationRepo.save(user);
 
     } /*endMB*/
     return(Trc) ;
