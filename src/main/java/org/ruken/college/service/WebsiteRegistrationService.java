@@ -31,7 +31,8 @@ public class WebsiteRegistrationService {
   public boolean registerUser(UserProfilePayload input) {
     /*------- Local variables -------*/
     boolean Trc        = true;
-UserProfile user = new UserProfile();
+
+    UserProfile user = new UserProfile();
   
     /*-------- Start of Code --------*/
     MB: {
